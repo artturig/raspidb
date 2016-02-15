@@ -9,6 +9,7 @@ db_conf.py
 *.exe
 *.o
 *.so
+*.pyc
 
 # Packages #
 ############
