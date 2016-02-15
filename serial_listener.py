@@ -3,6 +3,7 @@ import MySQLdb
 import sys
 import db_conf
 
+# use dbconn connection settings from db_conf.py file
 db_conf.dbconn()
 
 # check that we  have usb connected
