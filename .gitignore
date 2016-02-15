@@ -1,5 +1,5 @@
 #conf
-db.conf
+db_conf.py
 
 # Compiled source #
 ###################
