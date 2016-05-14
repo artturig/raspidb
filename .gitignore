@@ -39,3 +39,7 @@ db_conf.py
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# configuration files #
+#######################
+*.config.ini
