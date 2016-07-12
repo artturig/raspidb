@@ -38,11 +38,16 @@ while True:
     s = command.strip()
     suffix = ";"
     if s.endswith(suffix) == False:  # in line is not ending with ; forget it
-        print "crap"
+         x = "x" # do nothing
     elif not s:  # if s is empty forget it
         print "tyhja"
     else:
         s = s[:-1]  # remove tailing ;
         node, value = s.split(":")  # split message and assing variables
-        cur.execute("INSERT INTO lampo1 (node, lampo)  VALUES (%s, %s) ", (node, value))
-        db.commit()
+        if node == '1Node':
+          cur.execute("INSERT INTO lampo1 (node, lampo)  VALUES (%s, %s) ", (node, value))
+          db.commit()
+        else:
+          cur.execute("INSERT INTO rele1 (node, tila)  VALUES (%s, %s) ", (node, value))
+          db.commit()
+
