@@ -34,7 +34,6 @@ cur = db.cursor()
 # loop
 while True:
     command = serialport.readline()
-    print command
     s = command.strip()
     suffix = ";"
     if s.endswith(suffix) == False:  # in line is not ending with ; forget it
@@ -47,7 +46,8 @@ while True:
         if node == '1Node':
           cur.execute("INSERT INTO lampo1 (node, lampo)  VALUES (%s, %s) ", (node, value))
           db.commit()
+          print command
         else:
           cur.execute("INSERT INTO rele1 (node, tila)  VALUES (%s, %s) ", (node, value))
           db.commit()
-
+          print command
